@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 100
     });
     
-    // Header scroll effect
+   
     const header = document.getElementById('header');
     const backToTop = document.getElementById('back-to-top');
     
