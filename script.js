@@ -110,39 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form submission handling
-    const inquiryForm = document.getElementById('inquiry-form');
-    if (inquiryForm) {
-        inquiryForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const formDataObj = {};
-            
-            formData.forEach((value, key) => {
-                formDataObj[key] = value;
-            });
-            
-            // In a real implementation, you would send this data to a server
-            console.log('Form data:', formDataObj);
-            
-            // Show success message
-            this.innerHTML = `
-                <div class="form-success">
-                    <i class="fas fa-check-circle" style="font-size: 48px; color: var(--accent); margin-bottom: 20px;"></i>
-                    <h3>Thank you for your inquiry!</h3>
-                    <p>We've received your information and will contact you shortly.</p>
-                    <button type="button" class="btn btn-accent" id="reset-form" style="margin-top: 20px;">Submit Another Inquiry</button>
-                </div>
-            `;
-            
-            // Add event listener to the reset button
-            document.getElementById('reset-form').addEventListener('click', function() {
-                location.reload();
-            });
-        });
-    }
+   
     
     // Current year for copyright
     const yearElement = document.querySelector('.footer-bottom span.year');
